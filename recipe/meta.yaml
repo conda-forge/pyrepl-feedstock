@@ -1,32 +1,29 @@
-{% set name = "pyrepl" %}
 {% set version = "0.8.4" %}
-{% set sha256 = "3bcbbf1e47d2b80819b805aceea16dc90832ba4800035d595fa3c4bf48fcd4d7" %}
 
 package:
-  name: {{ name|lower }}
+  name: pyrepl
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/p/pyrepl/pyrepl-{{ version }}.tar.gz
+  sha256: 3bcbbf1e47d2b80819b805aceea16dc90832ba4800035d595fa3c4bf48fcd4d7
 
 build:
-  number: 2
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1002
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   skip: true  # [win]
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
-    - setuptools
+    - pip
   run:
     - python
-    - ncurses 5.9
+    - ncurses
 
 test:
-  requires:
-    - ncurses 5.9
   imports:
     - pyrepl
 
@@ -37,7 +34,6 @@ about:
   license_file: LICENSE
   summary: 'A library for building flexible command line interfaces'
 
-  # The remaining entries in this section are optional, but recommended
   description: |
     pyrepl is a Python library, inspired by readline, for building flexible
     command line interfaces, featuring:
