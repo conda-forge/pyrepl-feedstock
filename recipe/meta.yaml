@@ -28,7 +28,7 @@ test:
     - pyrepl
 
 about:
-  home: https://bitbucket.org/pypy/pyrepl
+  home: https://github.com/pypy/pyrepl
   license: MIT X11 style
   license_family: MIT
   license_file: LICENSE
@@ -44,8 +44,8 @@ about:
      * a fairly large subset of the readline emacs-mode keybindings
      * a liberal, Python-style, license
      * a new python top-level.
-  doc_url: https://bitbucket.org/pypy/pyrepl
-  dev_url: https://bitbucket.org/pypy/pyrepl
+  doc_url: https://github.com/pypy/pyrepl
+  dev_url: https://github.com/pypy/pyrepl
 
 extra:
   recipe-maintainers:
