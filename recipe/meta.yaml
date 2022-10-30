@@ -9,7 +9,7 @@ source:
   sha256: 292570f34b5502e871bbb966d639474f2b57fbfcd3373c2d6a2f3d56e681a775
 
 build:
-  number: 5
+  number: 6
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   skip: true  # [win]
 
@@ -28,9 +28,9 @@ test:
     - pyrepl
 
 about:
-  home: https://bitbucket.org/pypy/pyrepl
-  license: MIT X11 style
-  license_family: MIT
+  home: https://github.com/pypy/pyrepl
+  license: ISC
+  license_family: OTHER
   license_file: LICENSE
   summary: 'A library for building flexible command line interfaces'
 
@@ -44,8 +44,8 @@ about:
      * a fairly large subset of the readline emacs-mode keybindings
      * a liberal, Python-style, license
      * a new python top-level.
-  doc_url: https://bitbucket.org/pypy/pyrepl
-  dev_url: https://bitbucket.org/pypy/pyrepl
+  doc_url: https://github.com/pypy/pyrepl
+  dev_url: https://github.com/pypy/pyrepl
 
 extra:
   recipe-maintainers:
