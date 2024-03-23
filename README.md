@@ -380,5 +380,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@anjos](https://github.com/anjos/)
 * [@kynan](https://github.com/kynan/)
 
