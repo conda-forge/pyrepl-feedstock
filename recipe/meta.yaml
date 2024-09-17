@@ -22,6 +22,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools  # [py>=313]
   run:
     - python
     - ncurses
