@@ -1,15 +1,15 @@
-{% set version = "0.9.0" %}
+{% set version = "0.11.3" %}
 
 package:
   name: pyrepl
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pyrepl/pyrepl-{{ version }}.tar.gz
-  sha256: 292570f34b5502e871bbb966d639474f2b57fbfcd3373c2d6a2f3d56e681a775
+  url: https://pypi.org/packages/source/p/pyrepl/pyrepl-{{ version }}.tar.gz
+  sha256: a981a7928811bda57ca3beb0c674d414cf0a71fcb9a37b676ed415fd008174ad
 
 build:
-  number: 10
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   skip: true  # [win]
 
