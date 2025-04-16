@@ -32,9 +32,9 @@ test:
     - pyrepl
 
 about:
-  home: https://github.com/pypy/pyrepl
-  license: ISC
-  license_family: OTHER
+  home: https://pypi.org/project/pyrepl/
+  license: MIT
+  license_family: MIT
   license_file: LICENSE
   summary: 'A library for building flexible command line interfaces'
 
@@ -48,8 +48,8 @@ about:
      * a fairly large subset of the readline emacs-mode keybindings
      * a liberal, Python-style, license
      * a new python top-level.
-  doc_url: https://github.com/pypy/pyrepl
-  dev_url: https://github.com/pypy/pyrepl
+  doc_url: https://pypi.org/project/pyrepl/
+  dev_url: https://github.com/bretello/pyrepl
 
 extra:
   recipe-maintainers:
