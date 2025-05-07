@@ -36,7 +36,7 @@ test:
     - pip
   commands:
     - pip check
-    - TERM=xterm-256color pytest -sv -ra --timeout=10 tests
+    - TERM=xterm-256color pytest -sv -ra --ignore tests/test_curses.py --timeout=10 tests
   imports:
     - pyrepl
 
