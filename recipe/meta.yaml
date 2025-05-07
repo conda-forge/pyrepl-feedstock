@@ -33,6 +33,7 @@ test:
     - pytest
     - pytest-timeout
     - pexpect
+    - pip
   commands:
     - pip check
     - pytest -sv tests
