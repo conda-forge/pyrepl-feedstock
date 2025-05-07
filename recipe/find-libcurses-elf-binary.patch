@@ -1,0 +1,22 @@
+diff --git a/pyrepl/_minimal_curses.py b/pyrepl/_minimal_curses.py
+index e1379fb..4225174 100644
+--- a/pyrepl/_minimal_curses.py
++++ b/pyrepl/_minimal_curses.py
+@@ -10,6 +10,7 @@ hide this one if compiled in.
+ """
+ 
+ import ctypes.util
++import sys
+ 
+ 
+ class error(Exception):
+@@ -19,6 +20,9 @@ class error(Exception):
+ def _find_clib():
+     trylibs = ["ncursesw", "ncurses", "curses"]
+ 
++    if sys.platform == "linux":
++        trylibs = ["libncursesw.so.6", "libncurses.so.6"] + trylibs
++
+     for lib in trylibs:
+         path = ctypes.util.find_library(lib)
+         if path:
