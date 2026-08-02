@@ -1,4 +1,4 @@
-{% set version = "0.11.4" %}
+{% set version = "0.11.5" %}
 
 package:
   name: pyrepl
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyrepl/pyrepl-{{ version }}.tar.gz
-  sha256: efe988b4a6e5eed587e9769dc2269aeec2b6feec2f5d77995ee85b9ad7cf7063
+  sha256: ca5ac139835636005bed2bb0b6e2168de31a093e03a5b95edccbdbb7ca69b6fc
   patches:
     - find-libcurses-elf-binary.patch
 
